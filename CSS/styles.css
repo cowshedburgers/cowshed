@@ -236,3 +236,103 @@ a {
    margin: 0 auto;
 }
 
+/* Gallery container */
+.gallery {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Slide wrapper */
+.gallery__wrapper {
+  position: relative; /* stack slides for fade effect */
+  width: 100%;
+  aspect-ratio: 4 / 3;    /* adjust to taste */
+  overflow: hidden;
+}
+
+/* Individual slides */
+.gallery__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Active slide */
+.gallery__slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Arrows */
+.gallery__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery__arrow--prev { left: 1rem; }
+.gallery__arrow--next { right: 1rem; }
+
+.gallery__arrow:hover {
+  background: rgba(238,42,81,0.9); 
+  color: white;
+}
+
+/* Pagination dots */
+/* Pagination dots overlayed at bottom of image */
+.gallery__dots {
+  position: absolute;
+  bottom: 3.2rem;   /* distance from bottom of image */
+  width: 100%;
+  text-align: center;
+  margin: 0;         /* remove extra margins */
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.gallery__dot {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.gallery__dot.active {
+  background: var(--color-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__dots {
+   bottom: 8rem;
+  }
+  }
+
+@media screen and (min-width: 1024px) {
+  .gallery__wrapper {
+    height: 100vh;
+  }
+
+  .gallery__dots {
+   bottom: 2rem;
+  }
+}
