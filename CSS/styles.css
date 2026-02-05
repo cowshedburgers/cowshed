@@ -17,22 +17,39 @@ body {
 
 h1 {
    color: var(--color-accent);
-   font-size: 7rem;
+   font-size: 3rem;
+   margin-bottom: 1rem;
+   letter-spacing: 0.1rem;
+   font-weight: 200;
 }
 
 
 h2 {
    color: var(--color-accent);
-   font-size: 5rem;
+   font-size: 3rem;
    letter-spacing: 0.1rem;
    text-transform: uppercase;
+   font-weight: 200;
+   margin-bottom: 1rem;
 }
+
+h3 {
+   color: var(--color-accent);
+   font-size: 2rem;
+   letter-spacing: 0.1rem;
+   text-transform: uppercase;
+   font-weight: 200;
+   margin-bottom: 1rem;
+}
+
 
 
 p {
    color: var(--color-accent);
-   font-size: 2rem;
-   letter-spacing: 0.1rem;
+   font-size: 1.5rem;
+   letter-spacing: 0.2rem;
+   font-weight: 200;
+   margin-top: 0;
 }
 
 /* Navigation Bars */
@@ -189,3 +206,24 @@ a {
   background: var(--color-accent);
   color: var(--color-secondary);
 }
+
+/* Blocks */
+.block {
+   padding: 4rem 2rem;
+   border: 0;
+   color: var(--color-headings);
+   text-align: left;
+}
+
+
+.block__heading {
+   padding-top: 3rem;
+   text-transform: uppercase;
+}
+
+
+.container {
+   max-width: 1140px;
+   margin: 0 auto;
+}
+
