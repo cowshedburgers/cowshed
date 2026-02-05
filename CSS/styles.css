@@ -54,7 +54,7 @@ p {
  font-size: 3rem;
  background: none;
  border: 0;
- color: var(--color-headings);
+ color: var(--color-accent);
  cursor: pointer;
  position: absolute;
  top: 0;
@@ -97,13 +97,13 @@ p {
 
 
 .nav__item > a {
-   color: var(--color-headings);
+   color: var(--color-accent);
    transition: color 0.3s;
 }
 
 
 .nav__item > a:hover {
-   color: var(--color-accent);
+   color: var(--color-secondary);
 
 
 }
@@ -156,4 +156,17 @@ p {
        justify-self: center;
   
    }
+}
+
+
+/* Lists */
+.list {
+   list-style: none;
+   padding-left: 0;
+}
+
+
+/* Links */
+a {
+   text-decoration: none;
 }
