@@ -128,21 +128,25 @@ p {
 
 /* Hero */
 .hero {
- width: 100%;
- max-width: 1200px;
- margin: 0 auto;
- padding: 4rem 1.75rem;
- text-align: center;
+ width: 110vw;
+ height: 110vh;
+ margin-left: -5vw;
+ margin-top: -5vh;
+background-image: url("../images/burger3.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
 
-
-.logo__main {            
- width: 100%;
- height: 100%;
- object-fit: contain;   
- object-position: center;
- display: block;
+.hero__content {
+   display: flex;
+   flex-direction: column;
 }
+
 
 
 @media screen and (min-width: 768px) {
@@ -150,12 +154,6 @@ p {
        padding: 2rem 1.75rem;
    }
 
-
-   .logo__main {
-       width: 60%;
-       justify-self: center;
-  
-   }
 }
 
 
@@ -169,4 +167,25 @@ p {
 /* Links */
 a {
    text-decoration: none;
+}
+
+
+/* Buttons */ 
+.btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border: none;
+  color: var(--color-primary);
+  background: var(--color-accent);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  transform: translateY(-4rem);
+}
+
+.btn:hover {
+  background: var(--color-accent);
+  color: var(--color-secondary);
 }
