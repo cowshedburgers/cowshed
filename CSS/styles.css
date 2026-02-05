@@ -221,6 +221,15 @@ a {
    text-transform: uppercase;
 }
 
+.block__buttons {
+  display: flex;
+  flex-direction: column;   /* mobile default */
+  align-items: center;
+  gap: 2rem;
+  margin-top: 8rem;
+}
+
+
 
 .container {
    max-width: 1140px;
