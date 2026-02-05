@@ -124,3 +124,36 @@ p {
 
 
 }
+
+
+/* Hero */
+.hero {
+ width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 4rem 1.75rem;
+ text-align: center;
+}
+
+
+.logo__main {            
+ width: 100%;
+ height: 100%;
+ object-fit: contain;   
+ object-position: center;
+ display: block;
+}
+
+
+@media screen and (min-width: 768px) {
+   .hero {
+       padding: 2rem 1.75rem;
+   }
+
+
+   .logo__main {
+       width: 60%;
+       justify-self: center;
+  
+   }
+}
