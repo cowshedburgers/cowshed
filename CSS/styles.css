@@ -145,17 +145,16 @@ p {
 
 /* Hero */
 .hero {
- width: 110vw;
- height: 110vh;
- margin-left: -5vw;
- margin-top: -5vh;
-background-image: url("../images/burger3.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-display: flex;
 align-items: center;
+background-image: url("../images/burger3.jpg");
+background-position: 47% 50%;
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+height: 100vh;
 justify-content: center;
+margin: 0;
+width: 100%;
 
 }
 
@@ -199,12 +198,11 @@ a {
   background: var(--color-accent);
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  transform: translateY(-4rem);
 }
 
 .btn:hover {
-  background: var(--color-accent);
-  color: var(--color-secondary);
+  background: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* Blocks */
