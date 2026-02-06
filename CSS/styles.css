@@ -173,8 +173,8 @@ a {
 /* Buttons */ 
 .btn {
   display: inline-block;
-  padding: 1.2rem 3rem;
-  font-size: 2.4rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.8  rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   border: none;
