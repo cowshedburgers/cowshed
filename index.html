@@ -8,6 +8,66 @@
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
+    <section class="gallery">
+      <div class="gallery__wrapper">
+        <div class="gallery__slide">
+          <img
+            src="images/burger1024.webp"
+            srcset="
+              images/burger512.webp   512w,
+              images/burger1024.webp 1024w,
+              images/burger2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Burger"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/chef1024.webp"
+            srcset="
+              images/chef512.webp   512w,
+              images/chef1024.webp 1024w,
+              images/chef2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Chef"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/wallart1024.webp"
+            srcset="
+              images/wallart512.webp   512w,
+              images/wallart1024.webp 1024w,
+              images/wallart2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Burger"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/desserts1024.webp"
+            srcset="
+              images/dessserts512.webp  512w,
+              images/desserts1024.webp 1024w,
+              images/desserts2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Desserts"
+          />
+        </div>
+
+        <!-- Arrows INSIDE wrapper -->
+        <button class="gallery__arrow gallery__arrow--prev">&#10094;</button>
+        <button class="gallery__arrow gallery__arrow--next">&#10095;</button>
+
+        <!-- Dots INSIDE wrapper -->
+        <div class="gallery__dots"></div>
+      </div>
+    </section>
+
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -223,26 +223,31 @@ a {
 
 /* Slide wrapper */
 .gallery__wrapper {
-  position: relative; /* stack slides for fade effect */
+  position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;    /* adjust to taste */
-  overflow: hidden;
 }
 
-/* Individual slides */
+/* Individual slides overlap */
 .gallery__slide {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
+/* Height anchor (CRITICAL) */
+.gallery__wrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* pick your ratio */
+}
+
+/* Images */
 .gallery__slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* NO zoom, NO stretch */
   display: block;
 }
 
@@ -251,6 +256,7 @@ a {
   opacity: 1;
   z-index: 1;
 }
+
 
 /* Arrows */
 .gallery__arrow {
