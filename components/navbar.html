@@ -1,16 +1,26 @@
 <nav class="nav">
+  <!-- Logo always visible -->
   <a href="#" class="nav__logo">
     <img src="images/logo256.png" alt="Cowshed Logo" />
   </a>
+
+  <!-- Hamburger -->
   <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
     ☰
   </button>
 
-  <ul class="list nav__list" id="navMenu">
-    <li class="nav__item"><a href="#">About</a></li>
-    <li class="nav__item"><a href="#">Food</a></li>
-    <li class="nav__item"><a href="#">Drinks</a></li>
-    <li class="nav__item"><a href="#">Bookings</a></li>
-    <li class="nav__item"><a href="#">Opening Hours</a></li>
-  </ul>
+  <!-- Mobile overlay wrapper -->
+  <div class="nav__mobile-menu">
+    <ul class="list nav__list nav__list-left">
+      <li class="nav__item"><a href="#">About</a></li>
+      <li class="nav__item"><a href="#">Food</a></li>
+      <li class="nav__item"><a href="#">Drinks</a></li>
+    </ul>
+
+    <ul class="list nav__list nav__list-right">
+      <li class="nav__item"><a href="#">Socials</a></li>
+      <li class="nav__item"><a href="#">Bookings</a></li>
+      <li class="nav__item"><a href="#">Opening Hours</a></li>
+    </ul>
+  </div>
 </nav>

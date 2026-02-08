@@ -5,21 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
   ========================== */
 
   const toggle = document.querySelector('.nav__toggle');
-  const menu = document.querySelector('.nav__list');
+  const mobileMenu = document.querySelector('.nav__mobile-menu');
 
-  if (toggle && menu) {
-    // Toggle menu open / close
+  if (toggle && mobileMenu) {
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('nav__list--open');
+      mobileMenu.classList.toggle('nav__list--open');
 
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', !expanded);
+      toggle.setAttribute('aria-expanded', String(!expanded));
     });
 
     // Close menu when a link is clicked
-    menu.addEventListener('click', (e) => {
+    mobileMenu.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') {
-        menu.classList.remove('nav__list--open');
+        mobileMenu.classList.remove('nav__list--open');
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
@@ -34,43 +33,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.querySelector('.gallery__arrow--next');
   const dotsContainer = document.querySelector('.gallery__dots');
 
-  // Only run gallery code if slides exist
-  if (slides.length > 0 && dotsContainer) {
-
+  if (slides.length && dotsContainer) {
     let currentIndex = 0;
-    const totalSlides = slides.length;
     let autoScroll;
 
-    /* ---- Create dots automatically ---- */
     slides.forEach((_, index) => {
       const dot = document.createElement('span');
       dot.classList.add('gallery__dot');
-
       dot.addEventListener('click', () => {
         currentIndex = index;
-        showSlide(currentIndex);
+        showSlide();
         resetAutoScroll();
       });
-
       dotsContainer.appendChild(dot);
     });
 
     const dots = document.querySelectorAll('.gallery__dot');
 
-    /* ---- Show slide + update dots ---- */
-    function showSlide(index) {
+    function showSlide() {
       slides.forEach(slide => slide.classList.remove('active'));
       dots.forEach(dot => dot.classList.remove('active'));
 
-      slides[index].classList.add('active');
-      dots[index].classList.add('active');
+      slides[currentIndex].classList.add('active');
+      dots[currentIndex].classList.add('active');
     }
 
-    /* ---- Auto scroll ---- */
     function startAutoScroll() {
       autoScroll = setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        showSlide(currentIndex);
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide();
       }, 3000);
     }
 
@@ -79,26 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
       startAutoScroll();
     }
 
-    /* ---- Arrow navigation ---- */
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        showSlide(currentIndex);
-        resetAutoScroll();
-      });
-    }
+    nextBtn?.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide();
+      resetAutoScroll();
+    });
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        showSlide(currentIndex);
-        resetAutoScroll();
-      });
-    }
+    prevBtn?.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide();
+      resetAutoScroll();
+    });
 
-    /* ---- Init gallery ---- */
-    showSlide(currentIndex);
+    showSlide();
     startAutoScroll();
   }
-
 });
