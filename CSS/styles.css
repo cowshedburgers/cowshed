@@ -305,10 +305,31 @@ a {
    text-align: left;
 }
 
+.block__content {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* optional vertical centering */
+  flex-direction: column;  /* stacks heading and image vertically */
+  gap: 1rem;               /* optional spacing between heading and image */
+}
+
+.block__content img {
+  max-width: 50%; /* scales image */
+  height: auto;   /* preserves aspect ratio */
+}
+
+.block__menu h1 {
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+}
+
+
 .block__heading {
    padding-top: 3rem;
    text-transform: uppercase;
 }
+
+
 
 .block__buttons {
   display: flex;
@@ -322,6 +343,8 @@ a {
   color: var(--color-secondary);
 
 }
+
+.block
 
 .container {
    max-width: 1140px;
