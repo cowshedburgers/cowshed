@@ -1,33 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  /* =========================
-     NAVIGATION MENU
-  ========================== */
-
+  // =========================
+  // MOBILE MENU
+  // =========================
   const toggle = document.querySelector('.nav__toggle');
   const mobileMenu = document.querySelector('.nav__mobile-menu');
 
   if (toggle && mobileMenu) {
     toggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('nav__list--open');
+      mobileMenu.classList.toggle('open'); // CSS class for visible menu
 
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
     });
 
-    // Close menu when a link is clicked
     mobileMenu.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') {
-        mobileMenu.classList.remove('nav__list--open');
+        mobileMenu.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
 
-  /* =========================
-     IMAGE GALLERY / SLIDER
-  ========================== */
-
+  // =========================
+  // IMAGE GALLERY / SLIDER
+  // =========================
   const slides = document.querySelectorAll('.gallery__slide');
   const prevBtn = document.querySelector('.gallery__arrow--prev');
   const nextBtn = document.querySelector('.gallery__arrow--next');
@@ -53,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function showSlide() {
       slides.forEach(slide => slide.classList.remove('active'));
       dots.forEach(dot => dot.classList.remove('active'));
-
       slides[currentIndex].classList.add('active');
       dots[currentIndex].classList.add('active');
     }
@@ -85,4 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide();
     startAutoScroll();
   }
-});
+}); // End of DOMContentLoaded
