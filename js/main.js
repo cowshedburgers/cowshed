@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   // =========================
   // MOBILE MENU
   // =========================
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggle && mobileMenu) {
     toggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open'); // CSS class for visible menu
+      mobileMenu.classList.toggle('open');
 
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
@@ -21,6 +22,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // =========================
+  // SCROLLED NAVBAR (DESKTOP ONLY)
+  // =========================
+  const nav = document.querySelector('.nav');
+  const hero = document.querySelector('.hero');
+
+  function handleScrollNav() {
+    if (!nav || !hero) return;
+
+    // Only run on desktop
+    if (window.innerWidth < 768) {
+      nav.classList.remove('nav--scrolled');
+      return;
+    }
+
+    const heroHeight = hero.offsetHeight;
+
+    if (window.scrollY > heroHeight - 100) {
+      nav.classList.add('nav--scrolled');
+    } else {
+      nav.classList.remove('nav--scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', handleScrollNav);
+  window.addEventListener('resize', handleScrollNav);
+
+  handleScrollNav(); // Run once on load
+
+
   // =========================
   // IMAGE GALLERY / SLIDER
   // =========================
@@ -30,17 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotsContainer = document.querySelector('.gallery__dots');
 
   if (slides.length && dotsContainer) {
+
     let currentIndex = 0;
     let autoScroll;
 
+    // Create dots
     slides.forEach((_, index) => {
       const dot = document.createElement('span');
       dot.classList.add('gallery__dot');
+
       dot.addEventListener('click', () => {
         currentIndex = index;
         showSlide();
         resetAutoScroll();
       });
+
       dotsContainer.appendChild(dot);
     });
 
@@ -49,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showSlide() {
       slides.forEach(slide => slide.classList.remove('active'));
       dots.forEach(dot => dot.classList.remove('active'));
+
       slides[currentIndex].classList.add('active');
       dots[currentIndex].classList.add('active');
     }
@@ -80,4 +117,5 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide();
     startAutoScroll();
   }
-}); // End of DOMContentLoaded
+
+}); // END DOMContentLoaded
