@@ -7,217 +7,258 @@
     <link rel="stylesheet" href="CSS/normalise.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
-  <body>   
-  <!-- NAVBAR -->
-<nav class="nav">
-  <!-- LEFT MENU -->
-  <ul class="nav__list nav__list-left">
-    <li class="nav__item"><a href="#about">About</a></li>
-    <li class="nav__item"><a href="#food">Food</a></li>
-    <li class="nav__item"><a href="#drinks">Drinks</a></li>
-  </ul>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <!-- LEFT MENU -->
+      <ul class="nav__list nav__list-left">
+        <li class="nav__item"><a href="#about">About</a></li>
+        <li class="nav__item"><a href="#food">Food</a></li>
+        <li class="nav__item"><a href="#drinks">Drinks</a></li>
+      </ul>
 
-  <!-- LOGO -->
-  <a href="#" class="nav__logo">
-    <img src="images/logo256NEW.png" alt="Cowshed Logo" />
-  </a>
+      <!-- LOGO -->
+      <a href="#" class="nav__logo">
+        <img src="images/logo256.png" alt="Cowshed Logo" />
+      </a>
 
-  <!-- RIGHT MENU -->
-  <ul class="nav__list nav__list-right">
-    <li class="nav__item"><a href="#footer">Socials</a></li>
-    <li class="nav__item"><a href="#footer">Bookings</a></li>
-    <li class="nav__item"><a href="#hours">Opening Hours</a></li>
-  </ul>
+      <!-- RIGHT MENU -->
+      <ul class="nav__list nav__list-right">
+        <li class="nav__item"><a href="#footer">Socials</a></li>
+        <li class="nav__item"><a href="#footer">Bookings</a></li>
+        <li class="nav__item"><a href="#hours">Opening Hours</a></li>
+      </ul>
 
-  <!-- HAMBURGER (mobile only) -->
-  <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-    ☰
-  </button>
+      <!-- HAMBURGER (mobile only) -->
+      <button
+        class="nav__toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
-  <!-- MOBILE OVERLAY -->
-  <div class="nav__mobile-menu">
-    <ul class="list nav__list nav__list-left">
-      <li class="nav__item"><a href="#about">About</a></li>
-      <li class="nav__item"><a href="#food">Food</a></li>
-      <li class="nav__item"><a href="#drinks">Drinks</a></li>
-    </ul>
+      <!-- MOBILE OVERLAY -->
+      <div class="nav__mobile-menu">
+        <ul class="list nav__list nav__list-left">
+          <li class="nav__item"><a href="#about">About</a></li>
+          <li class="nav__item"><a href="#food">Food</a></li>
+          <li class="nav__item"><a href="#drinks">Drinks</a></li>
+        </ul>
 
-    <ul class="list nav__list nav__list-right">
-      <li class="nav__item"><a href="#footer">Socials</a></li>
-      <li class="nav__item"><a href="#footer">Bookings</a></li>
-      <li class="nav__item"><a href="#hours">Opening Hours</a></li>
-    </ul>
-  </div>
-</nav>
-<section class="hero">
-  <div class="hero__content">
-    <a href="#footer" class="btn btn--primary">Book Now</a>
-  </div>
-</section>
-<section id="about" class="block">
-  <div class="container block block__content">
-    <h1 class="block__heading">about us</h1>
-    <p class="block__text">
-      The Cowshed is a welcoming, independent venue at the heart of the
-      Scarborough community, known for its relaxed atmosphere, friendly service,
-      and quality food and drink. We pride ourselves on creating a space where
-      locals and visitors alike can unwind, enjoy great company, and feel right
-      at home. We combine fresh locally sourced ingredients and create burgers
-      to remember.
-    </p>
-
-    <h2 class="block__heading">got beef?</h2>
-    <p class="block__text">
-      Sourced and handled from North Yorkshire farms, our beef is pressed and
-      minced in house by our very own team ensuring each patty gets the care it
-      deserves. Great tasting flavours throughout every burger.
-    </p>
-    <h3 class="block__heading">phone</h3>
-    <p class="block__text">01723 377977</p>
-    <h3 class="block__heading">location</h3>
-    <p class="block__text">94-100 St Thomas St Scarborough YO11 1DU</p>
-    <h3 id="hours" class="block__heading">opening hours</h3>
-    <p>Open everyday from 16:00 - 21:00</p>
-  </div>
-  <div class="block__buttons">
-    <a href="#footer" class="btn">Book a table</a>
-    <a href="https://facebook.com/cowshedburgers" class="btn">Follow us on facebook</a>
-    <a href="https://instagram.com/cowshedburgers" class="btn">Check out our Instagram</a>
-  </div>
-</section>
-<section class="gallery">
-  <div class="gallery__wrapper">
-    <div class="gallery__slide">
-      <img
-        src="images/burger2-1024.webp"
-        srcset="
-          images/burger2-512.webp   512w,
-          images/burger2-1024.webp 1024w,
-          images/burger2-2048.webp 2048w
-        "
-        sizes="100vw"
-        alt="Burger"
-      />
+        <ul class="list nav__list nav__list-right">
+          <li class="nav__item"><a href="#footer">Socials</a></li>
+          <li class="nav__item"><a href="#footer">Bookings</a></li>
+          <li class="nav__item"><a href="#hours">Opening Hours</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero__content">
+        <a href="#footer" class="btn btn--primary">Book Now</a>
+      </div>
     </div>
-    <div class="gallery__slide">
-      <img
-        src="images/chef1024.webp"
-        srcset="
-          images/chef512.webp   512w,
-          images/chef1024.webp 1024w,
-          images/chef2048.webp 2048w
-        "
-        sizes="100vw"
-        alt="Chef"
-      />
-    </div>
-    <div class="gallery__slide">
-      <img
-        src="images/burger3-1024.webp"
-        srcset="images/burger3-512.webp 512w, images/burger3-1024.webp 1024w"
-        sizes="100vw"
-        alt="Burger"
-      />
-    </div>
-    <div class="gallery__slide">
-      <img
-        src="images/desserts1024.webp"
-        srcset="
-          images/desserts512.webp   512w,
-          images/desserts1024.webp 1024w,
-          images/desserts2048.webp 2048w
-        "
-        sizes="100vw"
-        alt="Desserts"
-      />
-    </div>
-    <div class="gallery__slide">
-      <img
-        src="images/wallart1024.webp"
-        srcset="
-          images/wallart512.webp   512w,
-          images/wallart1024.webp 1024w,
-          images/wallart2048.webp 2048w
-        "
-        sizes="100vw"
-        alt="Burger"
-      />
-    </div>
-    <div class="gallery__slide">
-      <img
-        src="images/desserts2-1024.webp"
-        srcset="
-          images/desserts2-512.webp   512w,
-          images/desserts2-1024.webp 1024w,
-          images/desserts2-2048.webp 2048w
-        "
-        sizes="100vw"
-        alt="Desserts"
-      />
-    </div>
-    <div class="gallery__slide">
-      <img
-        src="images/outside1024.webp"
-        srcset="images/outside512.webp 512w, images/outside1024.webp 1024w"
-        sizes="100vw"
-        alt="Desserts"
-      />
-    </div>
-    <!-- Arrows INSIDE wrapper -->
-    <button class="gallery__arrow gallery__arrow--prev">&#10094;</button>
-    <button class="gallery__arrow gallery__arrow--next">&#10095;</button>
+    <div id="about" class="block">
+      <div class="container block block__content">
+        <h1 class="block__heading">about us</h1>
+        <p class="block__text">
+          The Cowshed is a welcoming, independent venue at the heart of the
+          Scarborough community, known for its relaxed atmosphere, friendly
+          service, and quality food and drink. We pride ourselves on creating a
+          space where locals and visitors alike can unwind, enjoy great company,
+          and feel right at home. We combine fresh locally sourced ingredients
+          and create burgers to remember.
+        </p>
 
-    <!-- Dots INSIDE wrapper -->
-    <div class="gallery__dots"></div>
-  </div>
-</section>
- <section class="block__menu">
-  <div id="food" class="container block__content-menu">
-    <h1 class="block__heading block__heading-menu">our menus</h1>
-    <img src="images/foodmenu2-1024.webp" srcset="images/foodmenu2-512.webp 512w, images/foodmenu2-1024.webp 1024w, images/foodmenu2-1894.webp 1894w" sizes="100vw" loading="lazy" alt="Food Menu">
+        <h2 class="block__heading">got beef?</h2>
+        <p class="block__text">
+          Sourced and handled from North Yorkshire farms, our beef is pressed
+          and minced in house by our very own team ensuring each patty gets the
+          care it deserves. Great tasting flavours throughout every burger.
+        </p>
+        <h3 class="block__heading">phone</h3>
+        <p class="block__text">01723 377977</p>
+        <h3 class="block__heading">location</h3>
+        <p class="block__text">94-100 St Thomas St Scarborough YO11 1DU</p>
+        <h3 id="hours" class="block__heading">opening hours</h3>
+        <p>Open everyday from 16:00 - 21:00</p>
+      </div>
 
-    <img src="images/menu1800.png" alt="Burgers">
-
-
-  <div id="drinks" class="container block__content-menu">
-    <img src="images/drinksmenu1-1024.webp" srcset="images/drinksmenu1-512.webp 512w, images/drinksmenu1-1024.webp 1024w, images/drinksmenu1-1894.webp 1894w" sizes="100vw" loading="lazy" alt="Drinks Menu">
-    <img src="images/drinksmenu2-1024.webp" srcset="images/drinksmenu2-512.webp 512w, images/drinksmenu2-1024.webp 1024w, images/drinksmenu2-1894.webp 1894w" sizes="100vw" loading="lazy" alt="Cocktail Menu">
-</section>
-<footer id="footer" class="footer">
-  <section class="footer__section">
-    <div class="footer__brand">
-      <h2 class="bookings">book a table</h2>
-      <p class="bookings">call us on 01723 377977 or message us on our socials to book!</p>
-      <img src="images/logo.png" alt="" />
+      <div class="block__buttons">
+        <a href="#footer" class="btn">Book a table</a>
+        <a href="https://facebook.com/cowshedburgers" class="btn"
+          >Follow us on facebook</a
+        >
+        <a href="https://instagram.com/cowshedburgers" class="btn"
+          >Check out our Instagram</a
+        >
+      </div>
     </div>
-    <a href="#" class="footer__logo">
-      <img src="images/logo256NEW.png" alt="Cowshed Logo" />
-    </a>
-    <a
-      href="https://www.instagram.com/cowshedburgers"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="footer__logos"
-    >
-      <img src="images/insta.png" alt="Instagram Logo" />
-    </a>
-    <a
-      href="https://www.facebook.com/cowshedburgers"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="footer__logos"
-    >
-      <img src="images/facebook.png" alt="Facebook Logo" />
-    </a>
-    <p class="footer__content">
-      cowshed burgers, 94-100 St Thomas St, scarborough, england, YO11 1DU
-    </p>
-    <p class="footer__copyright">&copy; 2026 Cowshed Burgers</p>
-  </section>
-</footer>
+    <div class="gallery">
+      <div class="gallery__wrapper">
+        <div class="gallery__slide">
+          <img
+            src="images/burger2-1024.webp"
+            srcset="
+              images/burger2-512.webp   512w,
+              images/burger2-1024.webp 1024w,
+              images/burger2-2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Burger"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/chef1024.webp"
+            srcset="
+              images/chef512.webp   512w,
+              images/chef1024.webp 1024w,
+              images/chef2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Chef"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/burger3-1024.webp"
+            srcset="
+              images/burger3-512.webp   512w,
+              images/burger3-1024.webp 1024w
+            "
+            sizes="100vw"
+            alt="Burger"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/desserts1024.webp"
+            srcset="
+              images/desserts512.webp   512w,
+              images/desserts1024.webp 1024w,
+              images/desserts2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Desserts"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/wallart1024.webp"
+            srcset="
+              images/wallart512.webp   512w,
+              images/wallart1024.webp 1024w,
+              images/wallart2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Burger"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/desserts2-1024.webp"
+            srcset="
+              images/desserts2-512.webp   512w,
+              images/desserts2-1024.webp 1024w,
+              images/desserts2-2048.webp 2048w
+            "
+            sizes="100vw"
+            alt="Desserts"
+          />
+        </div>
+        <div class="gallery__slide">
+          <img
+            src="images/outside1024.webp"
+            srcset="images/outside512.webp 512w, images/outside1024.webp 1024w"
+            sizes="100vw"
+            alt="Desserts"
+          />
+        </div>
+        <!-- Arrows INSIDE wrapper -->
+        <button class="gallery__arrow gallery__arrow--prev">&#10094;</button>
+        <button class="gallery__arrow gallery__arrow--next">&#10095;</button>
 
-      </body>
-    </html>
+        <!-- Dots INSIDE wrapper -->
+        <div class="gallery__dots"></div>
+      </div>
+    </div>
+    <div class="block__menu">
+      <div id="food" class="container block__content-menu">
+        <h1 class="block__heading block__heading-menu">our menus</h1>
+        <img
+          src="images/foodmenu2-1024.webp"
+          srcset="
+            images/foodmenu2-512.webp   512w,
+            images/foodmenu2-1024.webp 1024w,
+            images/foodmenu2-1894.webp 1894w
+          "
+          sizes="100vw"
+          loading="lazy"
+          alt="Food Menu"
+        />
+        <img src="images/menu1800.png" alt="Burgers" />
+      </div>
+
+      <div id="drinks" class="container block__content-menu">
+        <img
+          src="images/drinksmenu1-1024.webp"
+          srcset="
+            images/drinksmenu1-512.webp   512w,
+            images/drinksmenu1-1024.webp 1024w,
+            images/drinksmenu1-1894.webp 1894w
+          "
+          sizes="100vw"
+          loading="lazy"
+          alt="Drinks Menu"
+        />
+        <img
+          src="images/drinksmenu2-1024.webp"
+          srcset="
+            images/drinksmenu2-512.webp   512w,
+            images/drinksmenu2-1024.webp 1024w,
+            images/drinksmenu2-1894.webp 1894w
+          "
+          sizes="100vw"
+          loading="lazy"
+          alt="Cocktail Menu"
+        />
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="footer__section">
+        <div class="footer__brand">
+          <h2 class="bookings">book a table</h2>
+          <p class="bookings">
+            call us on 01723 377977 or message us on our socials to book!
+          </p>
+          <img src="images/logo.png" alt="" />
+        </div>
+        <a href="#" class="footer__logo">
+          <img src="images/logo256.png" alt="Cowshed Logo" />
+        </a>
+        <a
+          href="https://www.instagram.com/cowshedburgers"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer__logos"
+        >
+          <img src="images/insta.png" alt="Instagram Logo" />
+        </a>
+        <a
+          href="https://www.facebook.com/cowshedburgers"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer__logos"
+        >
+          <img src="images/facebook.png" alt="Facebook Logo" />
+        </a>
+        <p class="footer__content">
+          cowshed burgers, 94-100 St Thomas St, scarborough, england, YO11 1DU
+        </p>
+        <p class="footer__copyright">&copy; 2026 Cowshed Burgers</p>
+      </div>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
