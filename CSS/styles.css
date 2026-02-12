@@ -398,8 +398,6 @@ a {
    text-transform: uppercase;
 }
 
-
-
 .block__buttons {
   display: flex;
   flex-direction: column;   /* mobile default */
@@ -410,10 +408,7 @@ a {
 
 .block__buttons .btn:hover {
   color: var(--color-secondary);
-
 }
-
-.block
 
 .container {
    max-width: 1140px;
@@ -544,7 +539,7 @@ a {
 }
 
 .footer__section {
-   padding: 2rem;
+   padding: 0.1rem;
 }
 
 .footer__section .list {
@@ -563,7 +558,7 @@ a {
 }
 
 .footer__brand {
-   margin-top: 5rem;
+   margin-top: 1rem;
 }
 
 .footer__brand img {
@@ -625,4 +620,83 @@ a {
    width: 100%;
    text-align: center;
  }
+}
+
+/* Reviews Section */
+
+.reviews-carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  padding-top: 5rem;
+}
+
+.reviews-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.review-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 30px 60px;
+  background: #fff;
+  color: var(--color-primary);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  margin: 10px 0;
+}
+
+.review-card p {
+  color: var(--color-primary);
+}
+
+.review-card h4, .review-card strong {
+  color: var(--color-primary);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: #333;
+}
+
+.reviews-platforms {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;                 /* space between logos */
+  margin-top: 4rem;
+}
+
+.platform-link img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.platform-link:hover img {
+  transform: scale(1.05);
+  opacity: 0.85;
 }

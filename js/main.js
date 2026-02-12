@@ -118,4 +118,72 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoScroll();
   }
 
+  // =========================
+  // REVIEWS CAROUSEL
+  // =========================
+  const reviewsTrack = document.querySelector('.reviews-track');
+  const reviewCards = document.querySelectorAll('.review-card');
+  const reviewsPrevBtn = document.querySelector('.reviews-carousel .prev');
+  const reviewsNextBtn = document.querySelector('.reviews-carousel .next');
+
+  if (reviewsTrack && reviewCards.length) {
+
+    let reviewsIndex = 0;
+    let reviewsAutoScroll;
+    let startX = 0;
+
+    function updateReviewsCarousel() {
+      reviewsTrack.style.transform = `translateX(-${reviewsIndex * 100}%)`;
+    }
+
+    function startReviewsAutoScroll() {
+      reviewsAutoScroll = setInterval(() => {
+        reviewsIndex = (reviewsIndex + 1) % reviewCards.length;
+        updateReviewsCarousel();
+      }, 5000);
+    }
+
+    function resetReviewsAutoScroll() {
+      clearInterval(reviewsAutoScroll);
+      startReviewsAutoScroll();
+    }
+
+    reviewsNextBtn?.addEventListener('click', () => {
+      reviewsIndex = (reviewsIndex + 1) % reviewCards.length;
+      updateReviewsCarousel();
+      resetReviewsAutoScroll();
+    });
+
+    reviewsPrevBtn?.addEventListener('click', () => {
+      reviewsIndex = (reviewsIndex - 1 + reviewCards.length) % reviewCards.length;
+      updateReviewsCarousel();
+      resetReviewsAutoScroll();
+    });
+
+    // Touch swipe support
+    reviewsTrack.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    reviewsTrack.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const difference = startX - endX;
+
+      if (difference > 50) {
+        reviewsIndex = (reviewsIndex + 1) % reviewCards.length;
+      }
+
+      if (difference < -50) {
+        reviewsIndex = (reviewsIndex - 1 + reviewCards.length) % reviewCards.length;
+      }
+
+      updateReviewsCarousel();
+      resetReviewsAutoScroll();
+    });
+
+    updateReviewsCarousel();
+    startReviewsAutoScroll();
+  }
+
+
 }); // END DOMContentLoaded
