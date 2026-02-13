@@ -270,7 +270,7 @@ p {
 
 .hero {
   height: 100vh;
-  background-image: url("../images/burger1024.webp");
+  background-image: url("../images/burger6-2048.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -280,8 +280,9 @@ p {
 
 .hero__content {
    display: flex;
-   justify-content: center;
+   flex-direction: column;
    align-items: center;
+   padding-top: 30rem;
    width: 100%;
 }
 
@@ -310,7 +311,7 @@ p {
 
 @media (min-width: 1024px) {
   .hero {
-    background-image: url("../images/burger1024.webp");
+    background-image: url("../images/burger6-2048.webp");
   }
 }
 /* Lists */
