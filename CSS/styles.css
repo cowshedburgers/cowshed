@@ -44,31 +44,32 @@ body {
 }
 
 h1, h2, h3 {
-  letter-spacing: 0.15rem;
-  margin-bottom: 1rem;
+  letter-spacing: 0.4rem;
+  margin-bottom: 0.3rem;
   text-transform: uppercase;
+
 }
 
 h1 {
-   color: var(--color-secondary);
-   font-size: 3rem;
+   color: var(--color-accent);
+   font-size: 6rem;
 }
 
 
 h2 {
-   color: var(--color-secondary);
-   font-size: 3rem;
+   color: var(--color-accent);
+   font-size: 4rem;
 }
 
 h3 {
-   color: var(--color-secondary);
-   font-size: 2.5rem;
+   color: var(--color-accent);
+   font-size: 3rem;
 }
 
 p {
    color: var(--color-accent);
    font-size: 2.5rem;
-   letter-spacing: 0.1rem;
+   letter-spacing: 0.3rem;
    margin-top: 0;
 }
 
@@ -160,9 +161,6 @@ p {
   color: #fff;
   text-decoration: none;
 }
-
-/* HERO SECTION */
-
 
 /* DESKTOP NAVBAR */
 @media (min-width: 768px) {
@@ -283,9 +281,17 @@ p {
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-top: 30rem;
    width: 100%;
+   position: relative;
 }
+
+.title {
+  position: relative;
+  top: 100%;
+  left: 80%;
+  transform: translateX(-80%);
+}
+
 
 .hero__content .btn {
   padding: 1rem 2rem;
@@ -339,12 +345,13 @@ a {
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn:hover {
   background: var(--color-primary);
   color: var(--color-secondary);
+  border-color: #ee2a51;
 }
 
 /* Blocks */
@@ -435,6 +442,8 @@ a {
   inset: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 /* Height anchor (CRITICAL) */
@@ -465,9 +474,9 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.7);
-  color: var(--color-primary);
+  color: var(--color-accent);
   border: none;
+  background: none;
   font-size: 3rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -478,8 +487,7 @@ a {
 .gallery__arrow--next { right: 1rem; }
 
 .gallery__arrow:hover {
-  background: rgba(238,42,81,0.9); 
-  color: white;
+  color: var(--color-secondary);
 }
 
 /* Pagination dots */
@@ -527,8 +535,8 @@ a {
 
 /* Footer Section */
 .footer {
-   background: var(--color-primary);
-   padding-top: 5rem;
+   background: #434242;
+   padding-top: 3rem;
    text-align: center;
 }
 
@@ -631,7 +639,8 @@ a {
   max-width: 600px;
   margin: auto;
   overflow: hidden;
-  padding-top: 5rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .reviews-track {
@@ -689,7 +698,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 3rem;                 /* space between logos */
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .platform-link img {
@@ -711,10 +720,11 @@ a {
   text-align: center;        /* centers text */
   padding: 2rem 1rem;        /* side padding for mobile */
   gap: 1rem;                 /* spacing between elements */
+
 }
 
 .monthly__heading {
-  color: var(--color-secondary);
+  color: var(--color-accent);
   font-size: 3.5rem;
   margin: 0 0 1rem 0;        /* bottom margin for spacing */
   text-align: center;        /* center the heading */
@@ -722,28 +732,39 @@ a {
 
 .monthly__image img {
   width: 100%;               /* full width of container */
-  max-width: 500px;          /* optional: prevent huge images on small screens */
+  max-width: 600px;          /* optional: prevent huge images on small screens */
   height: auto;
   display: block;
   margin: 0 auto;            /* horizontal centering */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 5rem rgba(0,0,0,0.5);
+  margin-top: 2rem;
 }
 
 .monthly__description {
   max-width: 500px;
   margin: 0 auto;
-  color: var(--color-secondary);
+  color: var(--color-accent);
   font-size: 3rem;
 }
 
 .monthly__features {
-  list-style-type: none;
-  padding-left: 1.2rem;
-  margin: 0 auto;
-  max-width: 400px;
-  text-align: left;          /* list aligned left */
+ list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.2rem;
+}
+
+.monthly__features li {
+  padding: 0.3rem 0.8rem;
   font-size: 2rem;
   color: var(--color-accent);
   letter-spacing: 0.1rem;
+
 }
 
 @media (min-width: 1024px) {
@@ -766,3 +787,4 @@ a {
     font-size: 3rem;
   }
 }
+
