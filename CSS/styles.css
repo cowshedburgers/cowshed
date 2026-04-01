@@ -752,12 +752,11 @@ a.btn-voucher {
   text-align: center;        /* centers text */
   padding: 2rem 1rem;        /* side padding for mobile */
   gap: 1rem;                 /* spacing between elements */
-
 }
 
 .monthly__heading {
   color: var(--color-accent);
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin: 0 0 1rem 0;        /* bottom margin for spacing */
   text-align: center;        /* center the heading */
 }
@@ -772,6 +771,7 @@ a.btn-voucher {
   overflow: hidden;
   box-shadow: 0 3rem 5rem rgba(0,0,0,0.5);
   margin-top: 2rem;
+  margin-bottom: 10rem;
 }
 
 .monthly__description {
