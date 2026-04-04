@@ -189,7 +189,107 @@ p {
     grid-column: 1;
     justify-content: flex-start;
     align-items: center;
-    gap: 10rem;
+    gap: 3rem;
+    margin-left: 3.7rem;
+  }
+
+
+  /* RIGHT LIST */
+  .nav__list-right {
+    display: flex;
+    grid-column: 3;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 2rem;
+  }
+
+  /* NAV ITEMS */
+  .nav__item a {
+    font-size: 1.37rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 0; 
+    letter-spacing: 0.2rem;
+  }
+
+  .nav__item a:hover {
+    color: var(--color-secondary);
+  }
+  /* LOGO */
+  .nav__logo {
+    grid-column: 2;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-top: -1rem;
+  }
+
+  .nav__logo img {
+    max-height: 10rem; /* adjust as needed */
+    display: block;
+  }
+
+  /* SCROLLED STATE */
+/* ===== SCROLLED STATE ===== */
+  .nav.nav--scrolled {
+    background: var(--color-primary);
+    grid-template-columns: 1fr 1fr; /* remove logo column */
+    padding: 2.5rem 4rem;
+    display: grid;
+    align-items: center;
+  }
+
+  .nav.nav--scrolled .nav__logo {
+    display: none;
+  }
+
+  .nav.nav--scrolled .nav__list-left,
+  .nav.nav--scrolled .nav__list-right {
+    display: flex;
+    align-items: center;          /* fixes vertical drop issue */
+    justify-content: space-evenly; /* equal spacing */
+    gap: 3rem;
+  }
+
+  .nav.nav--scrolled .nav__list-left {
+    grid-column: 1;
+  }
+
+  .nav.nav--scrolled .nav__list-right {
+    grid-column: 2;
+  }
+}
+
+/* DESKTOP NAVBAR */
+@media (min-width: 1024px) {
+  .nav {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* left | logo | right */
+    align-items: center;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Hide mobile hamburger and overlay */
+  .nav__toggle,
+  .nav__mobile-menu {
+    display: none;
+  }
+
+  .nav__list {
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  /* LEFT LIST */
+  .nav__list-left {
+    display: flex;
+    grid-column: 1;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
     margin-left: 6rem;
   }
 
@@ -200,13 +300,112 @@ p {
     grid-column: 3;
     justify-content: flex-end;
     align-items: center;
-    gap: 6rem;
+    gap: 3rem;
     margin-right: 4rem;
   }
 
   /* NAV ITEMS */
   .nav__item a {
     font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 0; 
+    letter-spacing: 0.2rem;
+  }
+
+  .nav__item a:hover {
+    color: var(--color-secondary);
+  }
+  /* LOGO */
+  .nav__logo {
+    grid-column: 2;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-top: -1rem;
+  }
+
+  .nav__logo img {
+    max-height: 13rem; /* adjust as needed */
+    display: block;
+  }
+
+  /* SCROLLED STATE */
+/* ===== SCROLLED STATE ===== */
+  .nav.nav--scrolled {
+    background: var(--color-primary);
+    grid-template-columns: 1fr 1fr; /* remove logo column */
+    padding: 2.5rem 4rem;
+    display: grid;
+    align-items: center;
+  }
+
+  .nav.nav--scrolled .nav__logo {
+    display: none;
+  }
+
+  .nav.nav--scrolled .nav__list-left,
+  .nav.nav--scrolled .nav__list-right {
+    display: flex;
+    align-items: center;          /* fixes vertical drop issue */
+    justify-content: space-evenly; /* equal spacing */
+    gap: 3rem;
+  }
+
+  .nav.nav--scrolled .nav__list-left {
+    grid-column: 1;
+  }
+
+  .nav.nav--scrolled .nav__list-right {
+    grid-column: 2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* left | logo | right */
+    align-items: center;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Hide mobile hamburger and overlay */
+  .nav__toggle,
+  .nav__mobile-menu {
+    display: none;
+  }
+
+  .nav__list {
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  /* LEFT LIST */
+  .nav__list-left {
+    display: flex;
+    grid-column: 1;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8rem;
+    margin-left: 6rem;
+  }
+
+
+  /* RIGHT LIST */
+  .nav__list-right {
+    display: flex;
+    grid-column: 3;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5rem;
+    margin-right: 5rem;
+  }
+
+  /* NAV ITEMS */
+  .nav__item a {
+    font-size: 2.4rem;
     text-decoration: none;
     color: #fff;
     padding: 0; 
