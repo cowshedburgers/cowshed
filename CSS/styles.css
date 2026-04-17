@@ -1011,3 +1011,23 @@ a.btn-voucher {
   }
 }
 
+
+  .location img {
+  width: 100%;               /* full width of container */
+  max-width: 600px;          /* optional: prevent huge images on small screens */
+  height: auto;
+  display: block;
+  margin: 0 auto;            /* horizontal centering */
+  overflow: hidden;
+  box-shadow: 0 3rem 5rem rgba(0,0,0,0.5);
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+}
+
+@media (min-width: 1024px) {
+  .location img {
+    width: 100%;              
+    max-width: 1024px;
+  }
+
+}
