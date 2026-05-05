@@ -1003,6 +1003,14 @@ a.btn-voucher {
   color: black;
 }
 
+@media (min-width: 768px) {
+  .monthly__heading img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto 20px;
+}
+}
 
 @media (min-width: 1024px) {
   .monthly__content {
