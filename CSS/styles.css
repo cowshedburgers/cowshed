@@ -944,6 +944,18 @@ a.btn-voucher {
 }
 
 /* Monthly Section */
+.monthly {
+  background-color: #d5d8e1;
+  width: 100%;
+}
+
+.monthly__heading-image {
+  display: block;
+  max-width: 50px; /* adjust size */
+  width: 100%;
+  margin: 0 auto 20px; /* center it + spacing below */
+}
+
 .monthly__content {
   display: flex;
   flex-direction: column;
@@ -951,6 +963,7 @@ a.btn-voucher {
   text-align: center;        /* centers text */
   padding: 2rem 1rem;        /* side padding for mobile */
   gap: 1rem;                 /* spacing between elements */
+  background-color: #d5d8e1;
 }
 
 .monthly__heading {
@@ -976,7 +989,7 @@ a.btn-voucher {
 .monthly__description {
   max-width: 500px;
   margin: 0 auto;
-  color: var(--color-accent);
+  color: black;
   font-size: 3rem;
 }
 
@@ -987,6 +1000,7 @@ a.btn-voucher {
   flex-wrap: wrap;
   justify-content: center;
   font-size: 2.5rem;
+  color: black;
 }
 
 
@@ -1000,6 +1014,13 @@ a.btn-voucher {
     width: 100%;              /* nearly full width */
     max-width: 1200px;
   }
+
+.monthly__heading img {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto 20px;
+}
 
   .monthly__description,
   .monthly__features {

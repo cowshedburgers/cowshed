@@ -405,23 +405,35 @@
       </div>
     </div>
 
-    <div class="container monthly__content">
-      <h2 class="monthly__heading">sweet 'n' sour</h2>
+    <section class="monthly">
+      
+      <div class="container monthly__content">
+        <h2 class="monthly__heading">
+         <picture class="monthly_heading-image">
+          <source
+            srcset="images/specialmenu512.webp 512w, images/specialmenu1024.webp 1024w" 
+            type="image/webp"
 
-      <p class="monthly__description">available throughout may</p>
-      <p class="monthly__features">
-        sweet & sour sauce, salt and pepper chicken, cheddar, crispy seaweed, fried onions & peppers
-      </p>
-      <picture class="monthly__image">
-        <source
-          srcset="images/may512.webp 512w, images/may1024.webp 1024w, images/may1600.webp 1600w"
-          type="image/webp"
-          sizes="100vw"
-          loading="lazy"
-        />
-        <img src="images/may1024.webp" alt="Burger of the month" />
-      </picture>
-    </div>
+            loading="lazy"
+          />
+          <img src="images/specialmenu1024.webp" alt="Burger of the month" />
+        </picture>
+        </h2>
+        <p class="monthly__description">available throughout may</p>
+        <p class="monthly__features">
+          sweet & sour sauce, salt and pepper chicken, cheddar, crispy seaweed, fried onions & peppers
+        </p>
+        <picture class="monthly__image">
+          <source
+            srcset="images/may512.webp 512w, images/may1024.webp 1024w, images/may1600.webp 1600w"
+            type="image/webp"
+            sizes="100vw"
+            loading="lazy"
+          />
+          <img src="images/may1024.webp" alt="Burger of the month" />
+        </picture>
+      </div>
+    </section>
 
     <div id="reviews" class="reviews-carousel">
       <button class="carousel-btn prev">&#10094;</button>
