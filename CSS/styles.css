@@ -963,7 +963,7 @@ a.btn-voucher {
   text-align: center;        /* centers text */
   padding: 2rem 1rem;        /* side padding for mobile */
   gap: 1rem;                 /* spacing between elements */
-  background-color: #d5d8e1;
+  background-color: #d5d8e1; 
 }
 
 .monthly__heading {
